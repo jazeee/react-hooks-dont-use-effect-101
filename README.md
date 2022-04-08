@@ -1,3 +1,20 @@
+Created using
+```
+create-react-app react-hooks-dont-use-effect-101 --template cra-template-typescript
+```
+
+Added packages:
+```
+yarn add react-query
+yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-prettier prettier
+```
+
+Added `.prettierrc`, and `eslintrc.js`
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
