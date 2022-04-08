@@ -4,7 +4,13 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      queryFn: ({ queryKey }) => fetch(queryKey[0] as RequestInfo).then((res) => res.json()),
+      queryFn: ({ queryKey }) => {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve(queryKey);
+          }, 1500 + Math.random() * 1500);
+        });
+      },
       refetchOnWindowFocus: false,
     },
   },
