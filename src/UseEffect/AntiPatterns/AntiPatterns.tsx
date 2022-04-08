@@ -1,10 +1,10 @@
-import { ApiRequestAntiPattern } from './ApiRequest';
-import { CopyPropsAntiPattern } from './CopyProps';
-import { DerivedPropsAntiPattern } from './DerivedProps';
-import { ExternalReferenceAntiPattern } from './ExternalReference';
-import { InfiniteLoopAntiPattern } from './InfinteLoop';
-import { LocalOrRemoteAntiPattern } from './LocalOrRemoteProp';
-import { ObjectUpdateInfiniteLoopAntiPattern } from './ObjectUpdateInfinteLoop ';
+import { ApiRequestAntiPattern } from './Examples/ApiRequest';
+import { CopyPropsAntiPattern } from './Examples/CopyProps';
+import { DerivedPropsAntiPattern } from './Examples/DerivedProps';
+import { ExternalReferenceAntiPattern } from './Examples/ExternalReference';
+import { InfiniteLoopAntiPattern } from './Examples/InfinteLoop';
+import { LocalOrRemoteAntiPattern } from './Examples/LocalOrRemoteProp';
+import { ObjectUpdateInfiniteLoopAntiPattern } from './Examples/ObjectUpdateInfinteLoop ';
 
 interface Props {
   firstName: string;
