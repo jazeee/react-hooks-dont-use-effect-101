@@ -1,9 +1,4 @@
-import { useEffect, useState } from 'react';
-
-let value = 0;
-function incrementValue() {
-  value += 1;
-}
+import { useState } from 'react';
 
 interface Props {
   firstName: string;
@@ -11,12 +6,19 @@ interface Props {
 
 export function ExternalReferenceAntiPattern(props: Props) {
   const { firstName } = props;
-  const [localFirstName, setLocalFirstName] = useState(firstName);
+  const [value, setValue] = useState(0);
+  function incrementValue() {
+    setValue((oldValue) => oldValue + 1);
+  }
 
-  useEffect(() => {
-    setLocalFirstName(`${firstName} ${value}`);
-    incrementValue();
-  }, [firstName]);
-
-  return <p>{localFirstName}</p>;
+  return (
+    <>
+      <p>
+        {firstName} {value}
+      </p>
+      <button type="button" onClick={() => incrementValue()}>
+        Increment Value
+      </button>
+    </>
+  );
 }

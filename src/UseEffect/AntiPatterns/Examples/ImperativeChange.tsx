@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 interface Props {
   firstName: string;
@@ -9,10 +9,6 @@ export function ImperativeChangeAntiPattern(props: Props) {
   const [localFirstName, setLocalFirstName] = useState(firstName);
   const [inputValue, setInputValue] = useState(firstName);
 
-  useEffect(() => {
-    setLocalFirstName(inputValue);
-  }, [inputValue]);
-
   return (
     <>
       <p>{localFirstName}</p>
@@ -22,7 +18,9 @@ export function ImperativeChangeAntiPattern(props: Props) {
           id="inputValue"
           value={inputValue}
           onChange={(event) => {
-            setInputValue(event.target.value);
+            const { value } = event.target;
+            setInputValue(value);
+            setLocalFirstName(`${value} 1`);
           }}
         />
       </label>

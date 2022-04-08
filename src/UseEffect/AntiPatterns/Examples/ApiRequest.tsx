@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import { useQuery } from 'react-query';
 
 interface Props {
@@ -7,14 +6,21 @@ interface Props {
 
 export function ApiRequestAntiPattern(props: Props) {
   const { firstName } = props;
-  const [localFirstName, setLocalFirstName] = useState(firstName);
-  const { data, isLoading } = useQuery<string>(firstName);
+  const {
+    data: localFirstName,
+    isLoading,
+    error,
+  } = useQuery<string>(firstName, {
+    onError: () => {
+      // show error toast
+    },
+    // onSuccess...
+  });
 
-  useEffect(() => {
-    if (data) {
-      setLocalFirstName(data);
-    }
-  }, [data]);
-
-  return <p>{isLoading ? 'Loading...' : localFirstName}</p>;
+  return (
+    <>
+      <p>{isLoading ? 'Loading...' : localFirstName}</p>
+      {error && <p>Error {error}</p>}
+    </>
+  );
 }
