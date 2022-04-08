@@ -4,6 +4,7 @@ import { CopyPropsAntiPattern } from './Examples/CopyProps';
 import { DerivedPropsAntiPattern } from './Examples/DerivedProps';
 import { ExternalReferenceAntiPattern } from './Examples/ExternalReference';
 import { ImperativeChangeAntiPattern } from './Examples/ImperativeChange';
+import { ImperativeNotASideEffectAntiPattern } from './Examples/ImperativeNotASideEffect';
 import { InfiniteLoopAntiPattern } from './Examples/InfinteLoop';
 import { LocalOrRemoteAntiPattern } from './Examples/LocalOrRemoteProp';
 import { ObjectUpdateInfiniteLoopAntiPattern } from './Examples/ObjectUpdateInfinteLoop ';
@@ -47,6 +48,10 @@ const EXAMPLES: {
   {
     name: 'Imperative magic',
     Component: ImperativeChangeAntiPattern,
+  },
+  {
+    name: 'Imperative Not a Side-effect',
+    Component: ImperativeNotASideEffectAntiPattern,
   },
 ];
 
