@@ -6,7 +6,7 @@ In order to understand those anti-patterns, this code highlights the cases, and 
 a playground to explore them.
 
 These anti-patterns are relatively straightforward to manage, and this
-[branch](https://github.com/jazeee/react-hooks-dont-use-effect-101/compare/jazeee-fix-anti-pattern?expand=1)
+[PR](https://github.com/jazeee/react-hooks-dont-use-effect-101/pull/2/files)
 demonstrates how to address these patterns and reduce risks related to `useEffect`
 
 ## Setup
