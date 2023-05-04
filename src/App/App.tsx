@@ -8,7 +8,7 @@ export function App() {
   return (
     <QueryProvider>
       <label id="firstNameLabel" htmlFor={inputId}>
-        First Name:{' '}
+        First Name:
         <input
           id={inputId}
           aria-labelledby="firstNameLabel"
