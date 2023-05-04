@@ -78,7 +78,16 @@ export function UseEffectAntiPatterns(props: Props) {
           </button>
         );
       })}
-      <div>{VisibleComponent && <VisibleComponent firstName={firstName} />}</div>
+      <div>
+        {VisibleComponent && (
+          <>
+            <p>
+              Component: <code>{VisibleComponent.name}</code>
+            </p>
+            <VisibleComponent firstName={firstName} />
+          </>
+        )}
+      </div>
     </>
   );
 }
